@@ -40,6 +40,37 @@ de vie) se fixe d'abord dans Holarch-system (l'architecture des Holons,
 - **Source seulement** : Holarch reconstruit l'application, octet pour
   octet ; jamais de binaire dans ce dépôt.
 
+## La Bibliothèque de Holarch
+
+Chaque holon qui a une **vitrine** paraît dans la Bibliothèque de Holarch
+(le « Holons Store »), classé par catégorie. Dans son dossier :
+
+| Fichier | Contenu |
+|---|---|
+| `vitrine.txt` | `nom`, `catégorie`, `résumé`, `version`, `icône`, `captures` (facultatif), `éditeur` (facultatif), `modes` (thèmes) ; un champ par ligne, `clé = valeur` |
+| `description.txt` | la description longue, paragraphes séparés par une ligne vide |
+| `icone.svg` | l'icône, carrée |
+| `captures/` | les captures d'écran (WebP ou PNG) |
+
+Les applications sont dans `apps/`, les thèmes (Holon-thème) dans `themes/`.
+Une application ou un thème va sur toutes les plateformes de Holarch.
+
+Catégories d'un Holon-app : Atelier (les modes de l'Atelier), Productivité,
+Création, Multimédia, Communication, Internet, Outils, Éducation, Jeux.
+Catégories d'un thème : Paysages, Villes, Espace, Abstraits ; ses `modes`
+disent s'il sait rendre le jour, la nuit, ou les deux.
+
+L'éditeur d'un holon a son profil dans `editeurs/<nom>/` : `editeur.txt`
+(`nom = …`) et, s'il en a une, son image de profil `avatar.svg` (ou .png,
+.webp). Ce que développe Holarch porte l'éditeur `holarch-system`.
+
+`python outils/catalogue.py` recalcule `catalogue.json`, que la
+Bibliothèque lit ; `--verifie` refuse un catalogue pas à jour.
+
+Premiers holons recensés : **Écriture** et **Tableur**, les deux modes de
+l'Atelier, et les thèmes **Désert** et **No Futur** (leur source est dans
+Holarch-windows ; le contrat d'un Holon-app reste à fixer).
+
 ## Licences
 
 Chaque application aura la sienne, dite dans son origine (identifiant

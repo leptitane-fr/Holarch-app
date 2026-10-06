@@ -1,0 +1,5 @@
+Le mode Écriture de l'Atelier, pensé pour les écrans larges : le texte garde le milieu, à la verticale, et les outils vont sur les côtés.
+
+Page A4 avec règles et tabulations, gras, italique, souligné, titres, listes et citations, pages multiples, zoom.
+
+Fait partie du socle de Holarch : toujours installé.

@@ -1,0 +1,4 @@
+licence = comprise dans Holarch
+auteur = Holarch System
+source = Holarch-windows, web/src (l'Atelier) ; holon du socle, livré avec Holarch pour Windows
+état = livré avec Holarch (maquette)

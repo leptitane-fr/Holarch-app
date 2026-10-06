@@ -1,0 +1,4 @@
+licence = comprise dans Holarch
+auteur = Holarch System
+source = Holarch-windows, maquettes/desert
+état = livré avec Holarch (maquette)
