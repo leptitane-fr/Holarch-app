@@ -40,6 +40,29 @@ de vie) se fixe d'abord dans Holarch-system (l'architecture des Holons,
 - **Source seulement** : Holarch reconstruit l'application, octet pour
   octet ; jamais de binaire dans ce dépôt.
 
+## La Bibliothèque de Holarch
+
+Chaque holon qui a une **vitrine** paraît dans la Bibliothèque de Holarch
+(le « Holons Store »), classé par catégorie. Dans son dossier :
+
+| Fichier | Contenu |
+|---|---|
+| `vitrine.txt` | `nom`, `catégorie`, `cible`, `résumé`, `version`, `icône`, `captures` (facultatif) ; un champ par ligne, `clé = valeur` |
+| `description.txt` | la description longue, paragraphes séparés par une ligne vide |
+| `icone.svg` | l'icône, carrée |
+| `captures/` | les captures d'écran (WebP ou PNG) |
+
+Catégories d'un Holon-app : Atelier (les modes de l'Atelier), Productivité,
+Création, Multimédia, Communication, Internet, Outils, Éducation, Jeux.
+La cible est `Holarch System`, `Holarch pour Windows`, ou les deux.
+
+`python outils/catalogue.py` recalcule `catalogue.json`, que la
+Bibliothèque lit ; `--verifie` refuse un catalogue pas à jour.
+
+Premiers holons recensés : **Écriture** et **Tableur**, les deux modes de
+l'Atelier de Holarch pour Windows (leur source est dans Holarch-windows ;
+le contrat d'un Holon-app reste à fixer).
+
 ## Licences
 
 Chaque application aura la sienne, dite dans son origine (identifiant

@@ -1,0 +1,8 @@
+nom = Écriture
+catégorie = Atelier
+cible = Holarch pour Windows
+résumé = Le mode texte de l'Atelier : page A4, règles, styles de paragraphe.
+version = 0.1.0
+icône = icone.svg
+captures = captures/1.webp
+socle = oui

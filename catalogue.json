@@ -1,0 +1,54 @@
+{
+ "format": 1,
+ "holons": [
+  {
+   "id": "ecriture",
+   "genre": "Holon-app",
+   "nom": "Écriture",
+   "categorie": "Atelier",
+   "cibles": [
+    "Holarch pour Windows"
+   ],
+   "resume": "Le mode texte de l'Atelier : page A4, règles, styles de paragraphe.",
+   "description": [
+    "Le mode Écriture de l'Atelier, pensé pour les écrans larges : le texte garde le milieu, à la verticale, et les outils vont sur les côtés.",
+    "Page A4 avec règles et tabulations, gras, italique, souligné, titres, listes et citations, pages multiples, zoom.",
+    "Fait partie du socle de Holarch pour Windows : toujours installé."
+   ],
+   "version": "0.1.0",
+   "licence": "comprise dans Holarch pour Windows",
+   "auteur": "Holarch (leptitane-fr)",
+   "etat": "livré avec Holarch pour Windows (maquette)",
+   "socle": true,
+   "icone": "apps/ecriture/icone.svg",
+   "captures": [
+    "apps/ecriture/captures/1.webp"
+   ],
+   "source": "apps/ecriture"
+  },
+  {
+   "id": "tableur",
+   "genre": "Holon-app",
+   "nom": "Tableur",
+   "categorie": "Atelier",
+   "cibles": [
+    "Holarch pour Windows"
+   ],
+   "resume": "Le mode tableur de l'Atelier : formules, mise en forme des cellules, feuilles.",
+   "description": [
+    "Le mode Tableur de l'Atelier : des feuilles de calcul dans la même table de travail que l'écriture.",
+    "Formules (SOMME, MOYENNE, MIN, MAX, NB) et références entre cellules, formats monétaire et pourcentage, décimales, gras, italique, souligné, plusieurs feuilles, zoom. Le tri et le filtre arrivent."
+   ],
+   "version": "0.1.0",
+   "licence": "comprise dans Holarch pour Windows",
+   "auteur": "Holarch (leptitane-fr)",
+   "etat": "livré avec Holarch pour Windows (maquette)",
+   "socle": false,
+   "icone": "apps/tableur/icone.svg",
+   "captures": [
+    "apps/tableur/captures/1.webp"
+   ],
+   "source": "apps/tableur"
+  }
+ ]
+}
