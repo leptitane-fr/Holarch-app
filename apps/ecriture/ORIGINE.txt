@@ -1,4 +1,4 @@
 licence = comprise dans Holarch pour Windows
-auteur = Holarch (leptitane-fr)
+auteur = Holarch System
 source = Holarch-windows, web/src (l'Atelier) ; holon du socle, livré avec Holarch pour Windows
 état = livré avec Holarch pour Windows (maquette)

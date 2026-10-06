@@ -1,4 +1,4 @@
 licence = comprise dans Holarch pour Windows
 auteur = Holarch System
-source = Holarch-windows, web/src (l'Atelier, mode Tableur)
+source = Holarch-windows, maquettes/desert
 état = livré avec Holarch pour Windows (maquette)

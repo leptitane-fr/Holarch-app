@@ -1,14 +1,18 @@
 {
  "format": 1,
+ "editeurs": {
+  "holarch-system": {
+   "nom": "Holarch System",
+   "avatar": "editeurs/holarch-system/avatar.svg"
+  }
+ },
  "holons": [
   {
    "id": "ecriture",
    "genre": "Holon-app",
    "nom": "Écriture",
    "categorie": "Atelier",
-   "cibles": [
-    "Holarch pour Windows"
-   ],
+   "cibles": null,
    "resume": "Le mode texte de l'Atelier : page A4, règles, styles de paragraphe.",
    "description": [
     "Le mode Écriture de l'Atelier, pensé pour les écrans larges : le texte garde le milieu, à la verticale, et les outils vont sur les côtés.",
@@ -17,9 +21,11 @@
    ],
    "version": "0.1.0",
    "licence": "comprise dans Holarch pour Windows",
-   "auteur": "Holarch (leptitane-fr)",
+   "auteur": "Holarch System",
    "etat": "livré avec Holarch pour Windows (maquette)",
    "socle": true,
+   "editeur": "holarch-system",
+   "modes": [],
    "icone": "apps/ecriture/icone.svg",
    "captures": [
     "apps/ecriture/captures/1.webp"
@@ -31,9 +37,7 @@
    "genre": "Holon-app",
    "nom": "Tableur",
    "categorie": "Atelier",
-   "cibles": [
-    "Holarch pour Windows"
-   ],
+   "cibles": null,
    "resume": "Le mode tableur de l'Atelier : formules, mise en forme des cellules, feuilles.",
    "description": [
     "Le mode Tableur de l'Atelier : des feuilles de calcul dans la même table de travail que l'écriture.",
@@ -41,14 +45,70 @@
    ],
    "version": "0.1.0",
    "licence": "comprise dans Holarch pour Windows",
-   "auteur": "Holarch (leptitane-fr)",
+   "auteur": "Holarch System",
    "etat": "livré avec Holarch pour Windows (maquette)",
    "socle": false,
+   "editeur": "holarch-system",
+   "modes": [],
    "icone": "apps/tableur/icone.svg",
    "captures": [
     "apps/tableur/captures/1.webp"
    ],
    "source": "apps/tableur"
+  },
+  {
+   "id": "desert",
+   "genre": "Holon-thème",
+   "nom": "Désert",
+   "categorie": "Paysages",
+   "cibles": null,
+   "resume": "Des ruines antiques sous la Voie lactée, éclairées par une lanterne.",
+   "description": [
+    "Des ruines antiques au milieu du désert, sous la Voie lactée. La scène est rééclairée en temps réel : une lanterne chaude éclaire les pierres, les étoiles scintillent une à une, une étoile filante passe parfois, des voiles de sable glissent au sol.",
+    "Le thème par défaut de Holarch. Le mode jour viendra avec ses cartes de jour."
+   ],
+   "version": "0.1.0",
+   "licence": "comprise dans Holarch pour Windows",
+   "auteur": "Holarch System",
+   "etat": "livré avec Holarch pour Windows (maquette)",
+   "socle": true,
+   "editeur": "holarch-system",
+   "modes": [
+    "nuit"
+   ],
+   "icone": "themes/desert/icone.webp",
+   "captures": [
+    "themes/desert/captures/1.webp"
+   ],
+   "source": "themes/desert"
+  },
+  {
+   "id": "no-futur",
+   "genre": "Holon-thème",
+   "nom": "No Futur",
+   "categorie": "Villes",
+   "cibles": null,
+   "resume": "Une avenue de ville abandonnée, du soleil couchant à la nuit étoilée.",
+   "description": [
+    "Une avenue de ville morte, rééclairée en temps réel. Le jour, des rayons de soleil passent entre les tours et des poussières dorées flottent dans la lumière. La nuit, la lune éclaire les nuages, des braises montent des décombres, trois réverbères au sodium grésillent et de vieux néons se rallument par moments.",
+    "Le passage du jour à la nuit se fait en douceur."
+   ],
+   "version": "0.1.0",
+   "licence": "comprise dans Holarch pour Windows",
+   "auteur": "Holarch System",
+   "etat": "livré avec Holarch pour Windows (maquette)",
+   "socle": false,
+   "editeur": "holarch-system",
+   "modes": [
+    "jour",
+    "nuit"
+   ],
+   "icone": "themes/no-futur/icone.webp",
+   "captures": [
+    "themes/no-futur/captures/1.webp",
+    "themes/no-futur/captures/2.webp"
+   ],
+   "source": "themes/no-futur"
   }
  ]
 }

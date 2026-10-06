@@ -1,7 +1,7 @@
 nom = Tableur
 catégorie = Atelier
-cible = Holarch pour Windows
 résumé = Le mode tableur de l'Atelier : formules, mise en forme des cellules, feuilles.
 version = 0.1.0
 icône = icone.svg
 captures = captures/1.webp
+éditeur = holarch-system
