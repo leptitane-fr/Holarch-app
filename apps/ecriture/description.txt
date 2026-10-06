@@ -2,4 +2,4 @@ Le mode Écriture de l'Atelier, pensé pour les écrans larges : le texte garde 
 
 Page A4 avec règles et tabulations, gras, italique, souligné, titres, listes et citations, pages multiples, zoom.
 
-Fait partie du socle de Holarch pour Windows : toujours installé.
+Fait partie du socle de Holarch : toujours installé.

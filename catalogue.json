@@ -17,12 +17,12 @@
    "description": [
     "Le mode Écriture de l'Atelier, pensé pour les écrans larges : le texte garde le milieu, à la verticale, et les outils vont sur les côtés.",
     "Page A4 avec règles et tabulations, gras, italique, souligné, titres, listes et citations, pages multiples, zoom.",
-    "Fait partie du socle de Holarch pour Windows : toujours installé."
+    "Fait partie du socle de Holarch : toujours installé."
    ],
    "version": "0.1.0",
-   "licence": "comprise dans Holarch pour Windows",
+   "licence": "comprise dans Holarch",
    "auteur": "Holarch System",
-   "etat": "livré avec Holarch pour Windows (maquette)",
+   "etat": "livré avec Holarch (maquette)",
    "socle": true,
    "editeur": "holarch-system",
    "modes": [],
@@ -44,9 +44,9 @@
     "Formules (SOMME, MOYENNE, MIN, MAX, NB) et références entre cellules, formats monétaire et pourcentage, décimales, gras, italique, souligné, plusieurs feuilles, zoom. Le tri et le filtre arrivent."
    ],
    "version": "0.1.0",
-   "licence": "comprise dans Holarch pour Windows",
+   "licence": "comprise dans Holarch",
    "auteur": "Holarch System",
-   "etat": "livré avec Holarch pour Windows (maquette)",
+   "etat": "livré avec Holarch (maquette)",
    "socle": false,
    "editeur": "holarch-system",
    "modes": [],
@@ -68,9 +68,9 @@
     "Le thème par défaut de Holarch. Le mode jour viendra avec ses cartes de jour."
    ],
    "version": "0.1.0",
-   "licence": "comprise dans Holarch pour Windows",
+   "licence": "comprise dans Holarch",
    "auteur": "Holarch System",
-   "etat": "livré avec Holarch pour Windows (maquette)",
+   "etat": "livré avec Holarch (maquette)",
    "socle": true,
    "editeur": "holarch-system",
    "modes": [
@@ -94,9 +94,9 @@
     "Le passage du jour à la nuit se fait en douceur."
    ],
    "version": "0.1.0",
-   "licence": "comprise dans Holarch pour Windows",
+   "licence": "comprise dans Holarch",
    "auteur": "Holarch System",
-   "etat": "livré avec Holarch pour Windows (maquette)",
+   "etat": "livré avec Holarch (maquette)",
    "socle": false,
    "editeur": "holarch-system",
    "modes": [
