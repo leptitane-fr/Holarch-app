@@ -17,9 +17,12 @@ La vitrine d'un holon, `<dossier>/<nom>/vitrine.txt`, un champ par ligne :
     modes = jour, nuit Holon-thème seulement : les modes que le thème sait rendre
     éditeur = …        facultatif : le dossier de son éditeur dans `editeurs/`
 La description longue est dans `description.txt` (paragraphes séparés par une ligne vide).
+Un holon installable a aussi son paquet (`manifeste.json`, `holon/`, `signature.txt`, voir
+outils/paquet.py) : le catalogue le décrit, et refuse un holon modifié depuis sa signature.
 La licence, l'auteur et l'état viennent de `ORIGINE.txt` (et, ici, de l'index).
 
-Un éditeur, `editeurs/<nom>/editeur.txt` : `nom = …` ; son image de profil, facultative,
+Un éditeur, `editeurs/<nom>/editeur.txt` : `nom = …`, `clé = …` (sa clé publique Ed25519, en
+hexadécimal, s'il signe des paquets) ; son image de profil, facultative,
 `editeurs/<nom>/avatar.svg` (ou .png, .webp).
 
 Usage : python outils/catalogue.py            écrit catalogue.json
@@ -28,6 +31,9 @@ Usage : python outils/catalogue.py            écrit catalogue.json
 import json
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paquet import paquet  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DOSSIERS = {"pilotes": "Holon-sys", "apps": "Holon-app", "themes": "Holon-thème"}
@@ -65,7 +71,7 @@ def lire_editeurs():
         if "nom" not in e:
             raise SystemExit(f"editeurs/{d.name}/editeur.txt : « nom » manque")
         avatar = next((f"editeurs/{d.name}/{f.name}" for f in sorted(d.glob("avatar.*"))), None)
-        editeurs[d.name] = {"nom": e["nom"], "avatar": avatar}
+        editeurs[d.name] = {"nom": e["nom"], "avatar": avatar, **({"cle": e["clé"]} if "clé" in e else {})}
     return editeurs
 
 
@@ -95,6 +101,12 @@ def holon(dossier, genre, etats, editeurs):
     for f in fichiers:
         if not (dossier / f).is_file():
             raise SystemExit(f"{rel}/{f} : fichier introuvable")
+    p = paquet(dossier, rel)
+    if p:
+        p, m = p
+        if (m["nom"], m["version"]) != (v["nom"], v["version"]):
+            raise SystemExit(f"{rel} : le nom et la version de manifeste.json et de vitrine.txt diffèrent")
+        verifier_signature(rel, p, editeurs)
     desc = (dossier / "description.txt").read_text("utf-8").strip() if (dossier / "description.txt").is_file() else ""
     return {
         "id": dossier.name,
@@ -114,7 +126,25 @@ def holon(dossier, genre, etats, editeurs):
         "icone": f"{rel}/{v['icône']}",
         "captures": [f"{rel}/{c}" for c in fichiers[1:]],
         "source": rel,
+        **({"paquet": p} if p else {}),
     }
+
+
+def verifier_signature(rel, p, editeurs):
+    """La clé est celle de l'éditeur ; la signature, si la bibliothèque est là pour la vérifier."""
+    if p["editeur"] not in editeurs or editeurs[p["editeur"]].get("cle") != p["cle"]:
+        raise SystemExit(f"{rel}/signature.txt : la clé n'est pas celle de editeurs/{p['editeur']}/editeur.txt")
+    try:
+        from cryptography.exceptions import InvalidSignature
+        from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
+    except ImportError:
+        return
+    try:
+        Ed25519PublicKey.from_public_bytes(bytes.fromhex(p["cle"])).verify(
+            bytes.fromhex(p["signature"]), b"HLN1 editeur" + bytes.fromhex(p["condense"])
+        )
+    except InvalidSignature:
+        raise SystemExit(f"{rel}/signature.txt : signature invalide")
 
 
 def build():

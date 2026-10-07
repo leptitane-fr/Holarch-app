@@ -69,7 +69,48 @@ Bibliothèque lit ; `--verifie` refuse un catalogue pas à jour.
 
 Premiers holons recensés : **Écriture** et **Tableur**, les deux modes de
 l'Atelier, et les thèmes **Désert** et **No Futur** (leur source est dans
-Holarch-windows ; le contrat d'un Holon-app reste à fixer).
+Holarch-windows). **Bloc-notes** est le premier holon qu'on installe
+vraiment depuis la Bibliothèque.
+
+## Un holon installable
+
+Un holon que la Bibliothèque sait installer a, en plus de sa vitrine, son
+**paquet** (exemple : `apps/bloc-notes/`) :
+
+| Fichier | Contenu |
+|---|---|
+| `manifeste.json` | le manifeste du format `.hln` : `id`, `nom`, `genre`, `version`, `abi`, `editeur`, `droits` demandés, `licence`… |
+| `holon/` | ses fichiers, **source seulement** ; `index.html` est l'entrée, ses `<link rel="stylesheet">` et `<script src>` locaux y sont mis en ligne par Holarch ; `glyphe.svg` (facultatif) donne le dessin de sa sphère (des `<path>` seulement, sur 32 × 32) |
+| `signature.txt` | le condensé du paquet, signé par l'éditeur |
+
+Le **condensé** est exactement celui d'une capsule `.hln` faite du même
+manifeste et des mêmes fichiers. Holarch télécharge les fichiers, recalcule
+le condensé lui-même, vérifie la signature avec la clé de l'éditeur **qu'il
+connaît déjà** (pas celle que dit le catalogue), montre à l'écran les droits
+demandés, et n'installe qu'avec l'accord de l'utilisateur. Un seul octet
+changé et l'installation est refusée.
+
+- `python outils/signer.py apps/<holon> --cle <fichier>` (ou la variable
+  `HOLARCH_EDITEUR`) signe le paquet ; la clé publique doit être celle de
+  `editeurs/<éditeur>/editeur.txt` (champ `clé`). **La clé privée ne va
+  jamais dans ce dépôt.**
+- `python outils/catalogue.py` refuse un holon modifié depuis sa signature.
+
+Un holon tourne **isolé** : pas d'accès au Bureau, aux fichiers, au réseau
+ni aux autres holons. Il ne parle à Holarch que par `window.holarch` :
+
+| Appel | Droit | Effet |
+|---|---|---|
+| `holarch.lire(clé)` | `stockage:propre` | promesse du texte rangé sous cette clé, ou `null` |
+| `holarch.ecrire(clé, texte)` | `stockage:propre` | range le texte (2 Mo au plus pour tout le holon) |
+| `holarch.effacer(clé)`, `holarch.cles()` | `stockage:propre` | efface une clé, liste les clés |
+| `holarch.apparence.nuit` | | `true` la nuit ; l'évènement `holarch:apparence` signale le changement |
+| `holarch.droits` | | les droits accordés |
+
+Droits que Holarch sait accorder aujourd'hui : `ecran` (ouvrir sa fenêtre)
+et `stockage:propre` (garder ses propres données, rangées dans Holarch). Un
+holon qui en demande un autre est refusé. Désinstallé, il part avec ses
+données.
 
 ## Licences
 

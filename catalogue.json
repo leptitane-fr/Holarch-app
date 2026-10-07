@@ -3,10 +3,62 @@
  "editeurs": {
   "holarch-system": {
    "nom": "Holarch System",
-   "avatar": "editeurs/holarch-system/avatar.svg"
+   "avatar": "editeurs/holarch-system/avatar.svg",
+   "cle": "5cfffc7d62a2b391241a1c397103b755c8d4cb9747cc2dfee6b0a3312ad47c0a"
   }
  },
  "holons": [
+  {
+   "id": "bloc-notes",
+   "genre": "Holon-app",
+   "nom": "Bloc-notes",
+   "categorie": "Productivité",
+   "cibles": null,
+   "resume": "Des notes rapides, rangées et retrouvées en un instant.",
+   "description": [
+    "Un bloc-notes simple pour tout ce qui doit être noté vite : une idée, une liste, un numéro. Chaque note prend son titre de sa première ligne.",
+    "Les notes s'enregistrent toutes seules à chaque frappe, se retrouvent par la recherche et se classent de la plus récente à la plus ancienne.",
+    "Bloc-notes ne demande que deux droits : ouvrir sa fenêtre et garder ses propres notes. Il n'a accès ni à vos fichiers ni à Internet ; ses notes restent dans Holarch."
+   ],
+   "version": "1.0.0",
+   "licence": "comprise dans Holarch",
+   "auteur": "Holarch System",
+   "etat": "publié",
+   "socle": false,
+   "editeur": "holarch-system",
+   "modes": [],
+   "icone": "apps/bloc-notes/icone.svg",
+   "captures": [
+    "apps/bloc-notes/captures/1.webp"
+   ],
+   "source": "apps/bloc-notes",
+   "paquet": {
+    "manifeste": "{\"format\":1,\"id\":\"fr.holarch.bloc-notes\",\"nom\":\"Bloc-notes\",\"genre\":\"holon-app\",\"version\":\"1.0.0\",\"abi\":1,\"editeur\":\"Holarch System\",\"droits\":[\"ecran\",\"stockage:propre\"],\"interfaces\":[],\"dependances\":[],\"licence\":\"comprise dans Holarch\"}",
+    "racine": "apps/bloc-notes/holon",
+    "fichiers": [
+     {
+      "chemin": "bloc-notes.css",
+      "longueur": 3870
+     },
+     {
+      "chemin": "bloc-notes.js",
+      "longueur": 6830
+     },
+     {
+      "chemin": "glyphe.svg",
+      "longueur": 209
+     },
+     {
+      "chemin": "index.html",
+      "longueur": 1939
+     }
+    ],
+    "condense": "80bdbb8429da90591b952ce790d0fe33d9e38562437bd9ebdd4188b9cba56b7a",
+    "editeur": "holarch-system",
+    "cle": "5cfffc7d62a2b391241a1c397103b755c8d4cb9747cc2dfee6b0a3312ad47c0a",
+    "signature": "86f2c891f8bdf6731ec6e87e874d29d8f86f02b35bdf60761bd58e4e940d9eeb0d5377e5a6e564746f0e9e7936f6cbec05b302afa43fa20573ea3a307b3ad80a"
+   }
+  },
   {
    "id": "ecriture",
    "genre": "Holon-app",
