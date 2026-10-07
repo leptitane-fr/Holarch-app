@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "id": "fr.holarch.bloc-notes",
+  "nom": "Bloc-notes",
+  "genre": "holon-app",
+  "version": "1.0.0",
+  "abi": 1,
+  "editeur": "Holarch System",
+  "droits": ["ecran", "stockage:propre"],
+  "interfaces": [],
+  "dependances": [],
+  "licence": "comprise dans Holarch"
+}

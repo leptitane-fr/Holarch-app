@@ -1,0 +1,8 @@
+nom = Clairière
+catégorie = Nature
+résumé = Une clairière en forêt, du plein soleil à la nuit des lucioles.
+version = 0.1.0
+icône = icone.webp
+captures = captures/1.webp, captures/2.webp
+modes = jour, nuit
+éditeur = holarch-system
