@@ -57,7 +57,7 @@ Une application ou un thème va sur toutes les plateformes de Holarch.
 
 Catégories d'un Holon-app : Atelier (les modes de l'Atelier), Productivité,
 Création, Multimédia, Communication, Internet, Outils, Éducation, Jeux.
-Catégories d'un thème : Paysages, Villes, Espace, Abstraits ; ses `modes`
+Catégories d'un thème : Nature, Paysages, Villes, Espace, Abstraits ; ses `modes`
 disent s'il sait rendre le jour, la nuit, ou les deux.
 
 L'éditeur d'un holon a son profil dans `editeurs/<nom>/` : `editeur.txt`

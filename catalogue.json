@@ -109,6 +109,34 @@
    "source": "apps/tableur"
   },
   {
+   "id": "clairiere",
+   "genre": "Holon-thème",
+   "nom": "Clairière",
+   "categorie": "Nature",
+   "cibles": null,
+   "resume": "Une clairière en forêt, du plein soleil à la nuit des lucioles.",
+   "description": [
+    "Une clairière au cœur de la forêt, avec son chemin, sa barrière de bois et la vallée au loin, rééclairée en temps réel. Le jour, le soleil passe entre les arbres et du pollen flotte dans la lumière ; l'interface prend le vert de la prairie et les sphères deviennent des gouttes de rosée. La nuit, le ciel s'étoile et des lucioles s'allument et s'éteignent au ras de l'herbe ; les sphères prennent leur lumière.",
+    "Le passage du jour à la nuit se fait en douceur."
+   ],
+   "version": "0.1.0",
+   "licence": "comprise dans Holarch",
+   "auteur": "Holarch System",
+   "etat": "livré avec Holarch (maquette)",
+   "socle": false,
+   "editeur": "holarch-system",
+   "modes": [
+    "jour",
+    "nuit"
+   ],
+   "icone": "themes/clairiere/icone.webp",
+   "captures": [
+    "themes/clairiere/captures/1.webp",
+    "themes/clairiere/captures/2.webp"
+   ],
+   "source": "themes/clairiere"
+  },
+  {
    "id": "desert",
    "genre": "Holon-thème",
    "nom": "Désert",

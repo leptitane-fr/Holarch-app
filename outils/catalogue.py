@@ -40,7 +40,7 @@ DOSSIERS = {"pilotes": "Holon-sys", "apps": "Holon-app", "themes": "Holon-thème
 CATEGORIES = {
     "Holon-sys": ["Pilotes", "Système", "Réseau", "Sécurité"],
     "Holon-app": ["Atelier", "Productivité", "Création", "Multimédia", "Communication", "Internet", "Outils", "Éducation", "Jeux"],
-    "Holon-thème": ["Paysages", "Villes", "Espace", "Abstraits"],
+    "Holon-thème": ["Nature", "Paysages", "Villes", "Espace", "Abstraits"],
 }
 MODES = {"jour", "nuit"}
 CIBLES = {"Holarch System", "Holarch pour Windows"}
