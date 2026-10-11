@@ -1,0 +1,7 @@
+nom = Bloc-notes
+catégorie = Productivité
+résumé = Des notes rapides, rangées et retrouvées en un instant.
+version = 1.0.0
+icône = icone.svg
+éditeur = holarch-system
+captures = captures/1.webp

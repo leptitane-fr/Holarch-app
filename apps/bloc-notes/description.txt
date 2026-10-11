@@ -1,0 +1,5 @@
+Un bloc-notes simple pour tout ce qui doit être noté vite : une idée, une liste, un numéro. Chaque note prend son titre de sa première ligne.
+
+Les notes s'enregistrent toutes seules à chaque frappe, se retrouvent par la recherche et se classent de la plus récente à la plus ancienne.
+
+Bloc-notes ne demande que deux droits : ouvrir sa fenêtre et garder ses propres notes. Il n'a accès ni à vos fichiers ni à Internet ; ses notes restent dans Holarch.

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Bloc-notes</title>
+<link rel="stylesheet" href="bloc-notes.css">
+</head>
+<body>
+<aside class="liste">
+  <div class="outils">
+    <label class="recherche">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="recherche" type="search" placeholder="Rechercher" aria-label="Rechercher dans les notes">
+    </label>
+    <button id="nouvelle" class="icone" title="Nouvelle note (Ctrl+N)" aria-label="Nouvelle note">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+  </div>
+  <ul id="notes" aria-label="Notes"></ul>
+  <p id="aucune" class="vide" hidden></p>
+</aside>
+<main>
+  <div id="editeur" hidden>
+    <header>
+      <span id="date"></span>
+      <span id="confirmer" hidden>Supprimer cette note ?
+        <button id="oui" class="danger">Supprimer</button><button id="non">Annuler</button></span>
+      <button id="supprimer" class="icone" title="Supprimer la note" aria-label="Supprimer la note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>
+      </button>
+    </header>
+    <textarea id="texte" spellcheck="true" aria-label="Texte de la note" placeholder="Écrivez ici. La première ligne devient le titre."></textarea>
+    <footer><span id="compte"></span><span id="etat"></span></footer>
+  </div>
+  <div id="accueil" class="vide">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 5h14a2 2 0 0 1 2 2v19a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M11 3v4M16 3v4M21 3v4M11 13h10M11 18h10M11 23h6"/></svg>
+    <p>Aucune note pour l'instant.</p>
+    <button id="premiere" class="principal">Nouvelle note</button>
+    <small>ou Ctrl+N</small>
+  </div>
+</main>
+<script src="bloc-notes.js"></script>
+</body>
+</html>
