@@ -68,7 +68,8 @@ L'éditeur d'un holon a son profil dans `editeurs/<nom>/` : `editeur.txt`
 Bibliothèque lit ; `--verifie` refuse un catalogue pas à jour.
 
 Premiers holons recensés : **Écriture** et **Tableur**, les deux modes de
-l'Atelier, et les thèmes **Désert** et **No Futur** (leur source est dans
+l'Atelier, et les thèmes **Holarch** (le thème classique, par défaut),
+**Désert**, **No Futur** et **Clairière** (leur source est dans
 Holarch-windows). **Bloc-notes** est le premier holon qu'on installe
 vraiment depuis la Bibliothèque.
 
