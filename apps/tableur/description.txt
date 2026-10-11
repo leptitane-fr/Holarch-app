@@ -1,0 +1,3 @@
+Le mode Tableur de l'Atelier : des feuilles de calcul dans la même table de travail que l'écriture.
+
+Formules (SOMME, MOYENNE, MIN, MAX, NB) et références entre cellules, formats monétaire et pourcentage, décimales, gras, italique, souligné, plusieurs feuilles, zoom. Le tri et le filtre arrivent.

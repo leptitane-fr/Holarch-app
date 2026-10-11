@@ -1,0 +1,9 @@
+nom = Désert
+catégorie = Paysages
+résumé = Des ruines antiques sous la Voie lactée, éclairées par une lanterne.
+version = 0.1.0
+icône = icone.webp
+captures = captures/1.webp
+modes = nuit
+éditeur = holarch-system
+socle = oui
