@@ -145,13 +145,13 @@
    "resume": "Des ruines antiques sous la Voie lactée, éclairées par une lanterne.",
    "description": [
     "Des ruines antiques au milieu du désert, sous la Voie lactée. La scène est rééclairée en temps réel : une lanterne chaude éclaire les pierres, les étoiles scintillent une à une, une étoile filante passe parfois, des voiles de sable glissent au sol.",
-    "Le thème par défaut de Holarch. Le mode jour viendra avec ses cartes de jour."
+    "Le mode jour viendra avec ses cartes de jour."
    ],
    "version": "0.1.0",
    "licence": "comprise dans Holarch",
    "auteur": "Holarch System",
    "etat": "livré avec Holarch (maquette)",
-   "socle": true,
+   "socle": false,
    "editeur": "holarch-system",
    "modes": [
     "nuit"
@@ -161,6 +161,34 @@
     "themes/desert/captures/1.webp"
    ],
    "source": "themes/desert"
+  },
+  {
+   "id": "holarch",
+   "genre": "Holon-thème",
+   "nom": "Holarch",
+   "categorie": "Abstraits",
+   "cibles": null,
+   "resume": "Le thème classique de Holarch : un dégradé bleu électrique, de jour comme de nuit.",
+   "description": [
+    "Le thème par défaut de Holarch, sobre et lisible : pas de décor, un fond en dégradé aux teintes de Holarch, le bleu électrique. La nuit, du bleu nuit au bleu profond, et les holons sont des sphères d'énergie qui éclairent le fond. Le jour, un ciel clair et bleuté, et les sphères deviennent du verre bleu.",
+    "L'interface prend les mêmes teintes, en sombre ou en clair. Le passage du jour à la nuit se fait en douceur."
+   ],
+   "version": "0.1.0",
+   "licence": "comprise dans Holarch",
+   "auteur": "Holarch System",
+   "etat": "livré avec Holarch (maquette)",
+   "socle": true,
+   "editeur": "holarch-system",
+   "modes": [
+    "jour",
+    "nuit"
+   ],
+   "icone": "themes/holarch/icone.webp",
+   "captures": [
+    "themes/holarch/captures/1.webp",
+    "themes/holarch/captures/2.webp"
+   ],
+   "source": "themes/holarch"
   },
   {
    "id": "no-futur",

@@ -6,4 +6,3 @@ icône = icone.webp
 captures = captures/1.webp
 modes = nuit
 éditeur = holarch-system
-socle = oui

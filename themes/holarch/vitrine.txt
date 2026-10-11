@@ -1,0 +1,9 @@
+nom = Holarch
+catégorie = Abstraits
+résumé = Le thème classique de Holarch : un dégradé bleu électrique, de jour comme de nuit.
+version = 0.1.0
+icône = icone.webp
+captures = captures/1.webp, captures/2.webp
+modes = jour, nuit
+éditeur = holarch-system
+socle = oui
